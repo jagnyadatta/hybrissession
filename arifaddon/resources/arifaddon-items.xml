@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. -->
+<!-- ATTENTION: This is just an example file. You have to edit it according 
+	to your needs. -->
+
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="items.xsd">
+
+	<itemtypes>
+		<itemtype code="DiscountInformation">
+			<deployment table="disInfo" typecode="21000" />
+			<attributes>
+				<attribute qualifier="desc" type="java.lang.String">
+					<persistence type="property"></persistence>
+				</attribute>
+				<attribute qualifier="code" type="java.lang.String">
+					<persistence type="property"></persistence>
+					<modifiers unique="true" />
+				</attribute>
+				<attribute qualifier="startDate" type="java.util.Date">
+					<persistence type="property"></persistence>
+				</attribute>
+				<attribute qualifier="endDate" type="java.util.Date">
+					<persistence type="property"></persistence>
+				</attribute>
+				<attribute qualifier="active" type="java.lang.Boolean">
+					<persistence type="property"></persistence>
+				</attribute>
+			</attributes>
+
+		</itemtype>
+	</itemtypes>
+</items>
