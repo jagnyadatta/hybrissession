@@ -82,5 +82,12 @@
         <property name="mediaService" ref="mediaService"/>
         <property name="flexibleSearchService" ref="flexibleSearchService"/>
     </bean>
+    
+    
+    <alias alias="productService" name="arifProductServiceImpl"/>
+    <bean id="arifProductServiceImpl" class="com.arif.self.product.service.ArifProductServiceImpl" parent="defaultProductService"></bean>
+    
+    
+    
 			
 </beans>

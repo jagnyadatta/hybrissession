@@ -29,5 +29,15 @@
 			</attributes>
 
 		</itemtype>
+		
+		<itemtype code="DiscountInformationCronJob" extends="CronJob"
+		 autocreate="true" generate="true" 
+		 jaloclass="com.arif.self.DiscountInformationCronJob">
+		 <attributes>
+		 <attribute type="java.lang.Boolean" qualifier="required">
+		 <persistence type="property"></persistence>
+		 </attribute>
+		 </attributes> 
+		 </itemtype>
 	</itemtypes>
 </items>

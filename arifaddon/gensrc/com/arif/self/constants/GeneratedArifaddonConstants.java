@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 17-Oct-2020, 9:37:41 PM                     ---
+ * --- Generated at 25-Oct-2020, 3:32:45 PM                     ---
  * ----------------------------------------------------------------
  */
 package com.arif.self.constants;
@@ -17,6 +17,7 @@ public class GeneratedArifaddonConstants
 	public static class TC
 	{
 		public static final String DISCOUNTINFORMATION = "DiscountInformation".intern();
+		public static final String DISCOUNTINFORMATIONCRONJOB = "DiscountInformationCronJob".intern();
 	}
 	public static class Attributes
 	{

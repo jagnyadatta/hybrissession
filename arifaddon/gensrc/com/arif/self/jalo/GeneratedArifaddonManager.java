@@ -1,11 +1,12 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 17-Oct-2020, 9:37:41 PM                     ---
+ * --- Generated at 25-Oct-2020, 3:32:45 PM                     ---
  * ----------------------------------------------------------------
  */
 package com.arif.self.jalo;
 
+import com.arif.self.DiscountInformationCronJob;
 import com.arif.self.constants.ArifaddonConstants;
 import com.arif.self.jalo.DiscountInformation;
 import de.hybris.platform.jalo.Item;
@@ -67,6 +68,32 @@ public abstract class GeneratedArifaddonManager extends Extension
 	public DiscountInformation createDiscountInformation(final Map attributeValues)
 	{
 		return createDiscountInformation( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public DiscountInformationCronJob createDiscountInformationCronJob(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( ArifaddonConstants.TC.DISCOUNTINFORMATIONCRONJOB );
+			return (DiscountInformationCronJob)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating DiscountInformationCronJob : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public DiscountInformationCronJob createDiscountInformationCronJob(final Map attributeValues)
+	{
+		return createDiscountInformationCronJob( getSession().getSessionContext(), attributeValues );
 	}
 	
 	@Override

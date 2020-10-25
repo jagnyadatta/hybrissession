@@ -8,6 +8,8 @@ import de.hybris.platform.servicelayer.search.FlexibleSearchService;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import com.arif.self.dao.DiscountDetailsDao;
 import com.arif.self.model.DiscountInformationModel;
 
@@ -18,6 +20,7 @@ import com.arif.self.model.DiscountInformationModel;
  */
 public class DefaultDiscountDetailsDaoImpl extends DefaultGenericDao<DiscountInformationModel> implements DiscountDetailsDao
 {
+	@Resource(name = "flexibleSearchService")
 	private FlexibleSearchService flexibleSearchService;
 
 	/**
@@ -34,7 +37,7 @@ public class DefaultDiscountDetailsDaoImpl extends DefaultGenericDao<DiscountInf
 	@Override
 	public List<DiscountInformationModel> getDiscounts()
 	{
-		// XXX Auto-generated method stub
+
 		return super.find();
 	}
 

@@ -35,5 +35,21 @@
 	<bean id="arifaddonSampleDataEventListener" parent="abstractGenericAddOnSampleDataEventListener"  >
 		<property name="extensionName" value="arifaddon" />
 	</bean>
+	
+	<bean id="discountDetailsDao" class="com.arif.self.dao.impl.DefaultDiscountDetailsDaoImpl">
+	<constructor-arg value="DiscountInformation" />
+	</bean>
+	<bean id="discountDetailsService" class="com.arif.self.service.impl.DefaultDiscountDetailsService"></bean>
+	<bean id="discountDetailsFacade" class="com.arif.self.facade.impl.DefaultDiscountDetailsFacade"></bean>
+	
+	<bean id="discountInformationPerformable" class="com.arif.self.cronjob.DiscountInformationPerformable"  parent="abstractJobPerformable"></bean>
+	
+	
+	
+	
+	
+	
+	
+	
 
 </beans>
