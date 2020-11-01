@@ -44,10 +44,27 @@
 	
 	<bean id="discountInformationPerformable" class="com.arif.self.cronjob.DiscountInformationPerformable"  parent="abstractJobPerformable"></bean>
 	
+ 
+ <bean id="discountInfoPopulator" class="com.arif.self.DiscountInfoPopulator"></bean>	
+	
+ <alias name="arifDefaultDiscountInfoConverter" alias="arifdiscountInfoConverter"/>
+    <bean id="arifDefaultDiscountInfoConverter" parent="abstractPopulatingConverter">
+        <property name="targetClass" value="com.arif.self.DiscountInformationData"/>
+        <property name="populators">
+            <list>
+               <ref bean="discountInfoPopulator"/>
+            </list>
+        </property>
+
+    </bean>
+	
+	<bean id="arifDataProductPopulator" class="com.arif.self.ArifDataProductPopulator"></bean>
 	
 	
-	
-	
+<bean parent="modifyPopulatorList">
+		<property name="list" ref="productConverter"/>
+		<property name="add" ref="arifDataProductPopulator"/>
+	</bean>
 	
 	
 	

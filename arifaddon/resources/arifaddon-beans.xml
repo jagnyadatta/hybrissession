@@ -16,5 +16,15 @@
 		<property name="flag" type="boolean"/>
 	</bean>
 	-->
+	<bean class="com.arif.self.DiscountInformationData">
+	<property name="code" type="java.lang.String"></property>
+	<property name="desc" type="java.lang.String"></property>
+	<property name="startDate" type="java.util.Date"></property>
+	<property name="endDate" type="java.util.Date"></property>
+	<property name="active" type="boolean"></property>
+	</bean>
+	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
+	<property name="arifData" type="java.lang.String"></property>
+	</bean>
 
 </beans>

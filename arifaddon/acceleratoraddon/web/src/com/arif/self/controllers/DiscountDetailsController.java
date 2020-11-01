@@ -8,8 +8,8 @@ import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.arif.self.DiscountInformationData;
 import com.arif.self.facade.DiscountDetailsFacade;
-import com.arif.self.model.DiscountInformationModel;
 
 
 /**
@@ -23,7 +23,7 @@ public class DiscountDetailsController
 
 	private DiscountDetailsFacade discountDetailsFacade;
 
-	public List<DiscountInformationModel> getDiscounts()
+	public List<DiscountInformationData> getDiscounts()
 	{
 
 		return discountDetailsFacade.getDiscounts();
